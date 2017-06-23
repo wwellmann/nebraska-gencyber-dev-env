@@ -5,7 +5,7 @@ This repository provides a central location that contains sub-modules related to
 * Docker (https://www.docker.com/)
 
 ### Installation
-You need to build the docker image from the provided DockerFile and Docker Compose. To do this, ensure docker is running, and then:
+You need to build the docker image from the provided DockerFile using Docker Compose. To do this, ensure docker is running, and then:
 
 ```bash
 git clone --recursive https://github.com/MLHale/nebraska-gencyber-dev-env.git
@@ -26,18 +26,24 @@ docker-compose run django bash
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser --username admin --email admin
+exit
 ```
-Now specify a password for admin. In development, use admin1234 for simplicity.
+Specify a password for admin. In development, use admin1234 for simplicity.
+
+### Run the app
+```bash
+docker-compose up
+```
 
 ### Backing up and restoring database from Postgres
 You can export data from postgres using the script:
 
-#### Backup
+#### Backup (command WIP)
 ```bash
 docker-compose run db pg_dump -U postgres postgres | gzip > database-backup/backupfile-name.gz
 ```
 
-#### Restore
+#### Restore (command wip)
 ```bash
 docker-compose run db pg_dump -U postgres postgres | gzip > database-backup/restorefile-name.gz
 ```
