@@ -1,3 +1,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/MLHale/littlebits-rest-api
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/MLHale/littlebits-rest-api-frontend
