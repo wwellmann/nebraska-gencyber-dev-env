@@ -19,3 +19,4 @@ RUN pip install djangorestframework
 RUN pip install markdown
 RUN pip install django-filter
 RUN pip install psycopg2
+RUN pip install requests
